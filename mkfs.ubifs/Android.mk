@@ -2,10 +2,9 @@
 
 LOCAL_PATH:= $(call my-dir)
 
-ifeq ($(BUILD_MKFS_UBIFS),true)
-  include $(CLEAR_VARS)
+include $(CLEAR_VARS)
 
-  LOCAL_SRC_FILES := \
+LOCAL_SRC_FILES := \
 	mkfs.ubifs.c \
 	crc16.c \
 	crc32.c \
@@ -15,16 +14,16 @@ ifeq ($(BUILD_MKFS_UBIFS),true)
 	hashtable/hashtable.c \
 	hashtable/hashtable_itr.c
 
-  LOCAL_CFLAGS = -O2 -Wall
-  LOCAL_CFLAGS+= -Wpointer-arith -Wwrite-strings -Wstrict-prototypes
-  LOCAL_CFLAGS+= -Wmissing-prototypes -Winline
-  LOCAL_LDLIBS:= -lz -llzo2 -lm -luuid -static
+LOCAL_CFLAGS = -O2 -Wall
+LOCAL_CFLAGS+= -Wpointer-arith -Wwrite-strings -Wstrict-prototypes
+LOCAL_CFLAGS+= -Wmissing-prototypes -Winline
+LOCAL_LDLIBS:= -lz -llzo2 -lm -luuid -static
 
-  LOCAL_C_INCLUDES += $(LOCAL_PATH)/
-  LOCAL_C_INCLUDES += $(LOCAL_PATH)/hashtable
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/hashtable
 
-  LOCAL_MODULE := mkfs.ubifs
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE := mkfs.ubifs
 
-  include $(BUILD_HOST_EXECUTABLE)
+include $(BUILD_HOST_EXECUTABLE)
 
-endif

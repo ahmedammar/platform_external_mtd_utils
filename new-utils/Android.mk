@@ -19,6 +19,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 
 LOCAL_MODULE := ubinize
+LOCAL_MODULE_TAGS := eng
 
 include $(BUILD_HOST_EXECUTABLE)
 
@@ -41,6 +42,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 
 LOCAL_MODULE := libubi
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -59,6 +61,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 LOCAL_SHARED_LIBRARIES := libubi
 
 LOCAL_MODULE := ubinfo
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
 
@@ -77,6 +80,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 LOCAL_SHARED_LIBRARIES := libubi
 
 LOCAL_MODULE := ubiformat
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
 
@@ -95,6 +99,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 LOCAL_SHARED_LIBRARIES := libubi
 
 LOCAL_MODULE := ubimkvol
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
 
@@ -113,6 +118,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 LOCAL_SHARED_LIBRARIES := libubi
 
 LOCAL_MODULE := ubiattach
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
 
@@ -131,6 +137,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 LOCAL_SHARED_LIBRARIES := libubi
 
 LOCAL_MODULE := ubidetach
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
 
@@ -149,5 +156,6 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/src
 LOCAL_SHARED_LIBRARIES := libubi
 
 LOCAL_MODULE := ubiupdatevol
+LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_EXECUTABLE)
