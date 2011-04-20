@@ -17,7 +17,7 @@ LOCAL_SRC_FILES := \
 LOCAL_CFLAGS = -O2 -Wall
 LOCAL_CFLAGS+= -Wpointer-arith -Wwrite-strings -Wstrict-prototypes
 LOCAL_CFLAGS+= -Wmissing-prototypes -Winline
-LOCAL_LDLIBS:= -lz -llzo2 -lm -luuid -static
+LOCAL_LDLIBS:= -lz -llzo2 -lm -luuid
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/hashtable
